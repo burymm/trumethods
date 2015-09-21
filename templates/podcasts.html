@@ -1,0 +1,15 @@
+<ion-view title="TruMethods">
+
+	<ion-nav-buttons side="left" ng-if="loggedin">
+		<button class="button button-icon icon ion-person" ng-click="openUserModal()"></button>
+	</ion-nav-buttons>
+
+	<ion-nav-buttons side="right" ng-if="loggedin">
+		<button class="button button-icon icon ion-ios7-download-outline" ng-click="openModal()"></button>
+	</ion-nav-buttons>
+
+	<ion-content class="has-header" scroll="false">
+		<iframe id="receiver" src="http://mobile.trumethods.com/app/?appp=1" style="width: 100%; height: 100%;"></iframe>
+	</ion-content>
+
+</ion-view>

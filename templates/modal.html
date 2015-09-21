@@ -1,0 +1,35 @@
+<div class="{{modalClass}}">
+	<ion-modal-view>
+
+		<ion-header-bar class="bar-tru">
+			<div class="buttons">
+				<button class="button button-icon icon ion-ios7-close-empty" ng-click="closeModal()"></button>
+			</div>
+			<h1 class="title">Downloads</h1>
+			<div class="buttons">
+			</div>
+		</ion-header-bar>
+		<ion-content>
+
+			<ion-list>
+
+				<ion-item ng-repeat="pod in pods" class="list-item item-thumbnail-left" href="#">
+
+					<img ng-if="!pod.thumb" ng-src="default-podcast.png">
+
+					<img ng-if="pod.thumb" ng-src="{{pod.thumb}}">
+
+					<h2>{{pod.title}}</h2>
+					<h4>{{pod.excerpt}}</h4>
+				<p>
+					<button id="send" class="button button-small button-stable" ng-click="playPod(pod.nativeUrl)">Play</button>
+					<button id="send" class="button button-small button-stable" ng-click="deletePod($index, pod.filename)">Delete</button>
+				</p>
+				</ion-item>
+			</ion-list>
+
+
+		</ion-content>
+
+	</ion-modal-view>
+</div>

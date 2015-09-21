@@ -1,0 +1,20 @@
+<div class="{{modalClass}}">
+	<ion-modal-view>
+
+		<ion-header-bar class="bar-tru">
+			<div class="buttons">
+				<button class="button button-icon icon ion-ios7-close-empty" ng-click="closeUserModal()"></button>
+			</div>
+			<h1 class="title"></h1>
+			<div class="buttons">
+			</div>
+		</ion-header-bar>
+		<ion-content class="padding">
+			<p>{{user}}</p>
+			<button class="button button-block button-small button-tm" ng-click="logOut()">
+				Log Out
+			</button>
+		</ion-content>
+
+	</ion-modal-view>
+</div>
